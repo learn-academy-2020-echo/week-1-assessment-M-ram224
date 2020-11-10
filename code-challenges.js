@@ -20,19 +20,19 @@ var temp3 = 212
   // return "35 is below boiling point" and repeat foing down!
 
 const theTemp = () =>{
-  if (cold == temp1){
+  if (temp1 < 35){
     return "35 is below boiling point"
-  }else if (spicy == temp2) {
+  }else if (temp2 > 350) {
     return "350 is above boiling point"
-  }else if (justRight == temp3) {
+  }else if (temp3 === 212) {
     return "212 is at boiling point"
   }
   }
 
 // // // I want the out put to be a string
-console.log(theTemp(cold));
-console.log(theTemp(spicy));
-console.log(theTemp(justRight));
+console.log(theTemp(temp1));
+console.log(theTemp(temp2));
+console.log(theTemp(temp3));
 
 // // // ---COMPLETE------2) Create a function that multiplies each number in the array by 5 using a for loop.
 // // Use the test variable provided below. Expected outcome: [15, 35, 0, 30, -45]
@@ -83,23 +83,23 @@ var myNumbers2 = [8, -7, 0, 6, 2].map(value=>{
 var stringWithVowels1 = "HeyThereLearnStudent"
 var stringWithVowels2 = "ILoveJavaScript"
 
-var split1 = stringWithVowels1.split("")
-var split2 = stringWithVowels2.split("")
 // need to create array to fix my const
-const vowel = (pullVowelArray) =>{
-  let i=0; i<pullVowelArray.length; i++{
-    if value !=="a" && value !=="e" && value !=="i" && value !=="I" && value !=="o" && value !=="u"
-      return pullVowelArray
+const vowel = (string) =>{
+  let splitSplit = string.split("")
+  let filterArray = stringSplit.filter(value => {
+    return value !=="a" && value !=="e" && value !=="i" && value !=="I" && value !=="o" && value !=="u"
+})
   // let pullVowels2 = stringWithVowels2.split("")
   // let filtered = pullVowels.filter(value =>{
   //   return value !== "a" && value !=="e" && value !=="i" && value !=="I" && value !=="o" && value !=="u"
+  return filteredArray.join("")
   }
 // return vowel.join("")
-var rejoin1 = (split1).join("")
-var rejoin2 = (split2).join("")
 
-console.log(rejoin1);
-console.log(rejoin2);
+
+
+console.log(vowel(stringWithVowels1));
+console.log(vowel(stringWithVowels2));
 
 
 // --------------------5) Copy/paste your code from #4. Refactor your code to include non-string edge cases. Inform your user that the variable passed into the vowel removal function is not a string.
@@ -108,9 +108,21 @@ console.log(rejoin2);
 var notAString1 = true
 var notAString2 = 42
 
-
-
-
+const notAString = (string) =>{
+  if(typeof string === "string"){
+    let stringSplit = string.split("")
+    let filterArray = stringSplit.filter(value => {
+      return value !=="a" && value !=="e" && value !=="i" && value !=="I" && value !=="o" && value !=="u"
+})
+  // let pullVowels2 = stringWithVowels2.split("")
+  // let filtered = pullVowels.filter(value =>{
+  //   return value !== "a" && value !=="e" && value !=="i" && value !=="I" && value !=="o" && value !=="u"
+  return filteredArray.join("")
+}else{
+  return `${string} is not a string`
+}
+console.log(notAString(notAString1));
+console.log(notAString(notAString2));
 
 // --------------------6) Create a function that takes the toonimals array and returns an array with only the toon objects that are cats.
 // Expected output: [ { name: "Stimpy", animal: "cat" }, { name: "Scratchy", animal: "cat" }, { name: "Felix", animal: "cat" } ]
@@ -133,6 +145,7 @@ var toonimals = [
 // var myObject = {key:"value", key2:"value "}
 
 const catOnly = (cats) =>{
+  return cats.filter(value => value.animal ==="cat")
   array.map()
 
   return toonimal.animal === ("")
@@ -143,3 +156,5 @@ const catOnly = (cats) =>{
 
 // --------------------7) Using the toonimals variable from #6, create a function that returns only the names of the non-cats.
 // Expected output: "Itchy" "Daffy" "Ren"
+
+cr
