@@ -11,7 +11,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
     - A function is a working statement that takes an argument and returns the value of said statement.
 
   Researched answer:
-    - A function is a reusable block of instructions (code), that ca be called on throughout the the code and return an outcome.
+    - A function is a reusable block of instructions (code), that ca be called on throughout the the code and return an outcome. Arguments behave as local variables
 
 
 
