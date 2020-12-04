@@ -159,7 +159,7 @@ console.log(catOnly(toonimals))
 const noCats = (array) => {
   // .filter out every animal !== "cats"
   let catFilter = array.filter((value) => value.animal !== "cat")
-  // return only the "str names"take the filtered array and map though it give us just the names, also .join(" ") with a space inbetween to seperate the words
+  // return only the "str names" take the filtered array and map though it give us just the names, also .join(" ") with a space inbetween to seperate the words
   return catFilter.map((value) => value.name).join(" ")
 }
 
